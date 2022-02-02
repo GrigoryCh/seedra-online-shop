@@ -1,0 +1,235 @@
+
+.catalogue {
+   padding-top: 105px;
+
+   // .catalogue__body
+
+   &__body {
+      display: grid;
+		align-items: start;
+		gap: rem(30);
+		@media (min-width: $tablet) {
+			grid-template-columns: rem(253) 1fr;
+		}
+   }
+}
+.top-catalogue {
+   margin-bottom: 25px;
+
+   // .top-catalog__body
+
+   &__body {
+      display: flex;
+      gap: rem(20);
+      @media (max-width: em(662)){
+           flex-direction: column;
+      }
+   }
+
+   // .top-catalog__search
+
+   &__search {
+      flex: 1 1 auto;
+   }
+
+   // .top-catalog__form
+
+   &__form {
+      max-width: 100%;
+      .input {
+         all: unset;
+         font-size: rem(16);
+         height: rem(63);
+      }
+   }
+}
+//========================================================================================================================================================
+
+.filter-catalogue {
+
+   // .filter-catalogue__title
+
+   &__title {
+      font-size: rem(14);
+      line-height: 178.19%;
+      margin-bottom: rem(8);
+   }
+}
+.item-filter-catalogue {
+
+   // .item-filter-catalogue__title
+
+   &__title {
+      font-weight: 500;
+      line-height: 178.19%;
+      letter-spacing: -0.035em;
+		width: 100%;
+		padding: rem(13) rem(30)  rem(13) 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+      border-top: 1px solid #EFEFEF;
+      &::before {
+			font-size: rem(8);
+			transition: all 0.3s ease 0s;
+		}
+		&._spoller-active {
+      border-bottom: 1px solid #EFEFEF;
+
+			&::before {
+   			transform: rotate(-180deg);
+            color: $greenColor;
+			}
+		}
+   }
+
+   // .item-filter-catalogue__body
+
+   &__body {
+      margin: 17px 0;
+   }
+}
+
+.checkbox {
+
+   // .checkbox__text
+
+   &__text {
+      font-size: rem(14);
+      line-height: 178.19%;
+      color: #70737C;
+   }
+}
+.price-filter {
+   // .price-filter__title
+
+   &__title {
+      &._spoller-active {
+         border-bottom: none;
+      }
+   }
+
+   // .price-filter__body
+
+   &__body {
+      margin-bottom: rem(25);
+   }
+
+   &__content {
+      display: grid;
+      grid-template-columns: auto;
+      justify-content: start;
+   }
+
+   // .price-filter__inputs
+
+   &__inputs {
+      display: flex;
+      gap: 15px;
+      justify-content: flex-start;
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+      // Remove arrows from input type = "number"
+      // Chrome, Safari, Edge, Opera 
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+      // Firefox 
+      input[type=number] {
+         -moz-appearance: textfield;
+      }
+   }
+
+   &__word {
+      font-size: rem(14);
+      line-height: 178.19%;
+      color: #70737C;
+      margin-bottom: rem(4);
+   }
+   // .price-filter__label
+
+   &__label {
+      border: 1px solid #EFEFEF;
+      border-radius: 7px;
+      width: 100%;
+      height: rem(46);
+      padding-left: 13px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &._form-focus {
+         border: 1px solid $greenColor;
+      }
+   }
+
+   &__line {
+      position: relative;
+      &::before {
+         content: " ";
+         position: absolute;
+         width: 18px;
+         height: 2px;
+         left: -9px;
+         bottom: 23px;
+         background: #70737C;
+      }
+   }
+
+   // .price-filter__input
+
+   &__input {
+      &:active, &:hover, &:focus {
+         outline: 0;
+         outline-offset: 0;
+      }
+      padding-right: 10px;
+   }
+}
+//========================================================================================================================================================
+
+// Styles of noUiSlider
+.noUi-connect {
+	background-color: $greenColor;
+}
+
+.noUi-target {
+	background-color: #EFEFEF;
+	border: none;
+	border-radius: 59px;
+	box-shadow: none;
+	height: 5px;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+	display: none;
+}
+
+.noUi-handle {
+	box-shadow: none;
+	border-radius: 100%;
+	background-color: #fff;
+	border: 1px solid $greenColor;
+   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+.noUi-horizontal .noUi-handle {
+	width: 14px;
+	height: 14px;
+	top: -5px;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+	right: -1px;
+}
+.noUi-horizontal .noUi-handle-lower {
+	right: -14px;
+}
+
+
+
+

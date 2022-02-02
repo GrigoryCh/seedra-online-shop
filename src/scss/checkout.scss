@@ -1,0 +1,118 @@
+.checkout {
+   padding: 104px 0 0 0;
+   @include adaptiveValue("margin-bottom", 133, 50);
+
+   // .checkout__container
+
+   &__container {
+      display: grid;
+      align-items: start;
+      @media (min-width:$tablet){
+         grid-template-columns: 1fr 350px;
+      }
+      @include adaptiveValue("column-gap", 30, 0);
+      row-gap: 30px;
+   }
+
+   // .checkout__header
+
+   &__header {
+      @include adaptiveValue("margin-bottom", 42, 20);
+   }
+}
+
+.form-checkout {
+
+   // .form-checkout__title
+
+   &__title {
+      margin-bottom: rem(16);
+      &_address {
+         margin-top: 24px;
+      }
+   }
+
+   // .form-checkout__row
+
+   &__row {
+      @media (min-width:$mobile){
+       display: flex;
+      }
+      @include adaptiveValue("gap", 30, 15);
+         margin-bottom: rem(16);
+   }
+
+   // .form-checkout__line
+
+   &__line {
+      @media (min-width:$mobile){
+         width: 50%;
+      }
+      @media (max-width:$mobile){
+         margin-bottom: rem(16);
+      }
+   }
+
+   // .form-checkout__label
+
+   &__label {
+      font-size: rem(14);
+      line-height: 178.19%;
+      color: $secondaryColor;
+      margin-bottom: rem(2);
+   }
+
+   // .form-checkout__button
+
+   &__button {
+      margin-top: 17px;
+   }
+}
+
+.cart-checkout {
+   border: 1px solid #EFEFEF;
+   box-shadow: 0px 4px 12px rgba(207, 207, 207, 0.25);
+   border-radius: 12px;
+   @include adaptiveValue("padding-top", 24, 15);
+   @include adaptiveValue("padding-bottom", 30, 15);
+   @include adaptiveValue("padding-right", 30, 15);
+   @include adaptiveValue("padding-left", 34, 15);
+   // .cart-checkout__title
+
+   &__title {
+      @include adaptiveValue("margin-bottom", 10, 5);
+   }
+
+   // .cart-checkout__items
+
+   &__items {
+      @include adaptiveValue("margin-bottom", 40, 20);
+   }
+
+   // .cart-checkout__item
+
+   &__item {
+      border-bottom: 1px solid #EFEFEF;
+      padding-top: 10px;
+   }
+
+   // .cart-checkout__text
+
+   &__text {
+      font-size: rem(14);
+      line-height: 178.19%;
+      color: #70737C;
+      margin-bottom: rem(9);
+   }
+
+   // .cart-checkout__price
+
+   &__price {
+      font-weight: 500;
+      font-size: rem(18);
+      line-height: 139%;
+      letter-spacing: -0.04em;
+      margin-bottom: rem(9);
+   }
+}
+

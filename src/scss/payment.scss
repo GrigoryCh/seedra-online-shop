@@ -1,0 +1,98 @@
+
+.payment {
+   padding-top: 104px;
+   @include adaptiveValue("margin-bottom", 94, 50);
+
+   // .payment__container
+
+   &__container {
+      max-width: 446px;
+   }
+
+   // .payment__header
+
+   &__header {
+      @include adaptiveValue("margin-bottom", 42, 20);
+   }
+}
+
+.form-payment {
+
+   // .form-payment__line
+
+   &__line {
+      @media (max-width:$mobile){
+         margin-bottom: rem(16);
+      }
+   }
+
+   // .form-payment__label
+
+   &__label {
+      display: inline-block;
+      font-size: rem(14);
+      line-height: 178.19%;
+      color: #70737C;
+      margin-bottom: rem(12);
+   }
+
+   // .form-payment__types
+
+   &__types {
+      display: grid;
+      justify-content: start;
+      grid-template-columns: repeat(4, auto);
+      gap: 27px;
+      @include adaptiveValue("margin-bottom", 30, 15);
+      @media (max-width: em(380)){
+         grid-template-columns: repeat(2,1fr);
+         li {
+            justify-self: center;
+         }
+      }
+   }
+
+   // .form-payment__type
+
+   &__type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &._active {
+         border: 1.34615px solid $greenColor;
+      }
+   }
+
+   // .form-payment__row
+
+   &__row {
+      @media (min-width:$mobile){
+         display: flex;
+        }
+        @include adaptiveValue("gap", 20, 15);
+           margin: rem(16) 0 rem(30);
+           border-bottom: 1px solid #EFEFEF;
+           @include adaptiveValue("padding-bottom", 50, 25);
+   }
+
+   // .form-payment__info
+
+   &__info {
+      @include adaptiveValue("margin-bottom", 30, 15);
+   }
+
+   // .form-payment__button
+
+   &__button {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &::after {
+         @extend %ic;
+         display: block;
+         content: "\e908";
+         transform: rotate(180deg);
+      }
+   }
+}
+

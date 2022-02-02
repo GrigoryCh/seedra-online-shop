@@ -1,0 +1,27 @@
+.blog {
+   padding-top: 104px;
+   @include adaptiveValue("margin-bottom", 83, 50);
+   // .blog__top
+
+   &__top {
+      margin-bottom: rem(20);
+   }
+
+   // .blog__blogger
+
+   &__blogger {
+
+      // .blog__blogger_first
+
+      &_first {
+         margin-bottom: rem(30);
+      }
+   }
+}
+
+
+
+
+
+
+

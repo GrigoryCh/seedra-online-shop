@@ -1,0 +1,499 @@
+@use "sass:math";
+
+// Подключение миксинов ===========================================================================================================================================================================================================================================================================
+@import "base/mixins";
+
+// Подключение шрифтов ===========================================================================================================================================================================================================================================================================
+//&display=swap - добавить при подключении через плагин
+@import url("https://fonts.googleapis.com/css?family=Lexend:300,regular,500,600,700&display=swap");
+// Подключить если есть локальные файлы шрифтов
+@import "fonts/fonts";
+
+// Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
+// Подключить если есть файл иконочного шрифта
+@import "fonts/icons";
+
+// Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
+$fontFamily: "Lexend";
+$fontSize: rem(16); // где 14(px) - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$mainColor: #1F2533; // Цвет шрифта по умолчанию
+$secondaryColor: #70737C;
+$greenColor: #359740;
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1440;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1110;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+// Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+@import "base/null";
+
+body {
+	// Скролл заблокирован
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+	// Сайт загружен
+	.loaded & {
+	}
+}
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+// Ограничивающий контейнер ======================================================================================================================================================================================================================
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+@if ($responsiveType==1) {
+	// Отзывчивая
+	[class*="__container"] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	// По брейк-поинтам
+	[class*="__container"] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: rem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: rem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+// Подключение базовых стилей, шаблонов (заготовок) и вспомагательных классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+@import "base/swiper";
+
+// Подключение стилей общих элементов проекта
+@import "common";
+@import "base/forms/rating";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей отдельных страниц
+@import "home";
+@import "catalog";
+@import "card";
+@import "cart";
+@import "checkout";
+@import "payment";
+@import "blog";
+@import "about";
+@import "contact";
+@import "how";
+//========================================================================================================================================================
+
+.page {
+   // .page__basil
+
+   &__basil {
+      padding-top: 104px;
+      margin-bottom: 16px;
+   }
+   
+   // .page__sell
+
+   &__sell {
+      @include adaptiveValue("margin-bottom", 60, 30);
+   }
+
+   // .page__products
+
+   &__products {
+      @include adaptiveValue("margin-bottom", 30, 0);
+   }
+
+   // .page__blogger
+
+   &__blogger {
+      @include adaptiveValue("margin-bottom", 85, 30);
+   }
+
+   // .page__what
+
+   &__what {
+      @include adaptiveValue("margin-bottom", 95, 15);
+   }
+
+   // .page__helps
+
+   &__helps {
+      @include adaptiveValue("margin-bottom", 61, 30);
+   }
+}
+
+//========================================================================================================================================================
+
+.basil {
+
+		// .basil__container
+
+		&__container {
+         @media (max-width:$mobileSmall){
+             margin: 0 -15px; 
+         }
+		}
+      
+      // .basil__body
+      
+      &__body {
+         display: flex;
+         background: #EAF1EB;
+         border-radius: 24px;
+         @media (max-width:$mobile){
+            flex-direction: column; 
+        }
+      }
+
+		// .basil__content
+
+		&__content {
+         flex: 1 1 auto;
+         padding-top: 50px;
+         padding-bottom: 50px;
+         @media (min-width:$mobile){
+             padding-left: 75px; 
+         }
+         @media (max-width:$mobile){
+             padding-left: 15px;
+             padding-right: 15px; 
+         }
+		}
+
+		// .basil__title
+
+		&__title {
+         margin-bottom: rem(12);
+		}
+
+		// .basil__text
+
+		&__text {
+         font-weight: 300;
+         font-size: rem(16);
+         line-height: 175%;
+         margin-bottom: rem(21);
+         @media (min-width:$mobile){
+            max-width: 560px;
+         }
+		}
+
+		// .basil__prices
+
+		&__prices {
+         display: flex;
+         gap: 21px;
+         align-items: center;
+         margin-bottom: 25px;
+		}
+
+		// .basil__price
+
+		&__price {
+         font-weight: 600;
+         @include adaptiveValue("font-size", 42, 25);
+         line-height: 129%;
+		}
+
+		// .basil__old-price
+
+		&__old-price {
+         font-weight: 600;
+         @include adaptiveValue("font-size", 22, 18);
+         line-height: 245%;
+         color: $secondaryColor;
+         text-decoration: line-through;
+		}
+
+		// .basil__image
+
+		&__image {
+         flex: 0 0 percent(387,1110);
+         img {
+            max-width: 100%;
+         }
+         justify-self: flex-end;
+         @media (min-width:1110px){
+            align-self: flex-end;
+         }
+         align-self: center;
+         @media (max-width:$mobile){
+             display: none; 
+         }
+		}
+}
+.buttons {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: start;
+      gap: 12px;
+}
+//========================================================================================================================================================
+
+.sell-page {
+
+   // .sell__body
+
+   &__body {
+      border-radius: 12px;
+      background: url('@img/sell/01.png') 0 100% no-repeat, url('@img/sell/02.png') 100% 100% no-repeat, rgba(255, 230, 46, 0.09);
+      text-align: center;
+      padding-top: 25px;
+      padding-right: 15px;
+      padding-left: 15px;
+      @include adaptiveValue("padding-bottom", 25, 130);
+
+   }
+
+   // .sell__text
+
+   &__text {
+      font-weight: 500;
+      line-height: 178.19%;
+      letter-spacing: -0.035em;
+      color: #70737C;
+      @media (max-width:$tablet){
+      padding: 0 15px;
+      color: $mainColor;
+      display: inline-block;
+      position: relative;
+      &::before {
+         content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+         background-color: rgba(234, 241,	235, 0.5);
+         }
+      }
+   }
+}
+//========================================================================================================================================================
+
+.top-products {
+
+   // .top-products__container
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 15px;
+      @include adaptiveValue("margin-bottom", 42, 25);
+   }
+
+   // .top-products__title
+
+   &__title {
+      padding-right: 35px;
+   }
+}
+
+.catalog {
+
+   // .catalog__buttons
+
+   &__buttons {
+      display: flex;
+      justify-content: flex-start;
+      gap: 12px;
+      flex-wrap: nowrap;
+      overflow: auto;
+      margin-bottom: rem(32);
+   }
+
+   // .catalog__button
+
+   &__button {
+      flex: 1 1 auto;
+      display: flex;
+      flex-wrap: nowrap;
+      column-gap: rem(16);
+      // padding: 22px 32px 22px 16px;
+      justify-content: center;
+      color: inherit;
+      transition: all 0.3s ease 0s;
+      &.is-checked {
+         color: $greenColor;
+         border: 2px solid $greenColor;
+      }
+   }
+
+   // .catalog__products
+
+   &__products {
+      @media (min-width: em(1139)){
+      margin: 0 -30px 0 0;
+      }
+      @media (max-width: em(1139)){
+         // @include adaptiveValue("margin-left",60 ,30);
+      }
+      @media (max-width: em(662)){
+         // margin-left: 0;
+    }
+   }
+
+   // .catalog__product
+
+   &__product {
+      margin: 0 30px 30px 0;
+      @media (max-width: em(662)){
+           margin-right: 0;
+      }
+      
+   }
+}
+//========================================================================================================================================================
+
+.top-blogger {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   row-gap: 15px;
+   @include adaptiveValue("margin-bottom", 42, 25);
+   // .top-blogger__title
+
+   &__title {
+      padding-right: 35px;
+   }
+}
+//========================================================================================================================================================
+
+.what {
+  
+   // .what__container
+
+   &__container {
+      min-width: 0;
+   }
+
+   // .what__title
+
+   &__title {
+      @include adaptiveValue("margin-bottom", 44, 25);
+      text-align: center;
+   }
+
+   // .what__slider
+
+   &__slider {
+     margin-top: 74px;
+     overflow: visible !important;
+   }
+
+   // .what__swiper
+
+   &__swiper {
+    @include adaptiveValue("margin-bottom", 37, 0);
+
+   }
+
+   // .what__slide
+
+   &__slide {
+      opacity: 0.5;
+      transition: all 0.3s ease 0s;
+      // display: flex;
+		// flex-direction: column;
+   }
+
+   .swiper-slide-active {
+      opacity: 1;
+      margin-top: -35px;
+      margin-bottom: 35px;
+      @media (max-width: em(625)){
+         margin-top: -55px;
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

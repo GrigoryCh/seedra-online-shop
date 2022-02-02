@@ -1,0 +1,132 @@
+.about {
+   padding-top: 104px;
+   // .about__top
+
+   &__top {
+      @include adaptiveValue("margin-bottom", 60, 30);
+   }
+
+   // .about__helps
+
+   &__helps {
+      @include adaptiveValue("margin-bottom", 60, 30);
+   }
+
+   // .about__story
+
+   &__story {
+      @include adaptiveValue("margin-bottom", 80, 30);
+   }
+
+   // .about__meet 
+
+   &__meet {
+      @include adaptiveValue("margin-bottom", 80, 50);
+   }
+}
+
+.story-about {
+
+   // .story-about__container
+
+   &__container {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("gap", 65, 20);
+      @media (max-width:$tablet){
+         flex-direction: column-reverse;
+      }
+   }
+
+   // .story-about__image
+
+   &__image {
+      flex: 0 0 50%;
+      img {
+         max-width: 100%;
+      }
+   }
+
+   // .story-about__contetnt
+
+   &__contetnt {
+      flex: 1 1 auto;
+   }
+
+   // .story-about__title
+
+   &__title {
+      @include adaptiveValue("margin-bottom", 27, 15);
+   }
+
+   // .story-about__text
+
+   &__text {
+      font-weight: 300;
+      line-height: 175%;
+      p {
+         @include adaptiveValue("margin-bottom", 25, 15);
+      }
+   }
+}
+.meet-about {
+
+   // .meet-about__title
+
+   &__title {
+      text-align: center;
+      @include adaptiveValue("margin-bottom", 60, 30);
+   }
+
+   // .meet-about__items
+
+   &__items {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+     gap: rem(30);
+   }
+
+   // .meet-about__item
+
+   &__item {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+
+   // .meet-about__image
+
+   &__image-ibg {
+      width: 255px;
+      height: 255px;
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      @include adaptiveValue("margin-bottom", 16, 10);
+   }
+
+   // .meet-about__name
+
+   &__name {
+      display: inline-block;
+      font-weight: 600;
+      @include adaptiveValue("font-size", 22, 18);
+      line-height: 155%;
+      letter-spacing: -0.05em;
+      @include adaptiveValue("margin-bottom", 16, 10);
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover){
+         &:hover{
+            color: $greenColor;
+         }
+      }
+   }
+
+   // .meet-about__job
+
+   &__job {
+      font-weight: 300;
+      line-height: 175%;
+   }
+}
