@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Checkout</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220202113214">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__wrapper">
+				<div class="header__container">
+					<div class="header__body">
+						<div class="header__main">
+							<a href="index.html" class="header__logo">
+								<img src="img/logo.svg" alt="logo">
+							</a>
+							<div class="header__menu menu">
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu__item"><a href="catalog.html" class="menu__link">ALL PRODUCTS</a></li>
+										<li class="menu__item"><a href="about.html" class="menu__link">ABOUT SEEDRA</a></li>
+										<li class="menu__item"><a href="blog.html" class="menu__link">OUR BLOG</a></li>
+										<li class="menu__item"><a href="contact.html" class="menu__link">CONTACTS</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div data-da=".menu__body,478" class="header__social social-header">
+							<a href="#" class="social-header_item _icon-inst"></a>
+							<a href="#" class="social-header_item _icon-fb"></a>
+						</div>
+						<div class="header__search">
+							<div class="search-form">
+								<button type="button" class="search-form__icon _icon-search"></button>
+								<form action="#" class="search-form__item search-form__item_h">
+									<button type="submit" class="search-form__btn _icon-search"></button>
+									<input autocomplete="off" type="text" name="form[]" data-error="Try again" placeholder="Search" class="input">
+								</form>
+							</div>
+						</div>
+						<div class="header__actions actions-header">
+							<a href="#" class="actions-header__item actions-header__item_favourite _icon-favourite"></a>
+							<a href="#" data-popup="#popup" class="actions-header__item actions-header__item_cart _icon-cart"></a>
+						</div>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page page__checkout">
+			<section class="checkout">
+				<div class="checkout__container">
+					<div class="checkout__body">
+						<div class="checkout__header header-block">
+							<a href="cart.html" class="header-block__link _icon-arrow-left">
+								<h2 class="header-block__title second-title">Checkout</h2>
+							</a>
+							<div class="header-block__lines">
+								<a href="#" class="header-block__line header-block__line_inactive"></a>
+								<a href="payment.html" class="header-block__line"></a>
+							</div>
+						</div>
+						<form action="#" class="checkout__form form-checkout">
+							<h3 class="form-checkout__title sub-title">Personal info</h3>
+							<div class="form-checkout__row">
+								<div class="form-checkout__line">
+									<label for="name" class="form-checkout__label">Name</label>
+									<input data-required id="name" autocomplete="off" type="text" name="form[]" data-error="Enter your name" placeholder="Your name" class="input input_cart">
+								</div>
+								<div class="form-checkout__line">
+									<label for="phone" class="form-checkout__label">Phone number</label>
+									<input data-required id="phone" autocomplete="off" type="text" name="form[]" data-error="Enter your number" placeholder="Your number" class="input input_cart">
+								</div>
+							</div>
+							<h3 class="form-checkout__title form-checkout__title_address sub-title">Address</h3>
+							<div class="form-checkout__row">
+								<div class="form-checkout__line">
+									<label for="state" class="form-checkout__label">State</label>
+									<input data-required id="state" autocomplete="off" type="text" name="form[]" data-error="Enter name of state" placeholder="Name of state" class="input input_cart">
+								</div>
+								<div class="form-checkout__line">
+									<label for="city" class="form-checkout__label">City</label>
+									<input data-required id="city" autocomplete="off" type="text" name="form[]" data-error="Enter city name" placeholder="Name of city" class="input input_cart">
+								</div>
+							</div>
+							<div class="form-checkout__row">
+								<div class="form-checkout__line">
+									<label for="address" class="form-checkout__label">Address</label>
+									<input data-required id="address" autocomplete="off" type="text" name="form[]" data-error="Enter your address" placeholder="1901 Thornridge Cir. Shiloh, Hawaii 81063" class="input input_cart">
+								</div>
+								<div class="form-checkout__line">
+									<label for="zip" class="form-checkout__label">ZIP code</label>
+									<input data-required id="zip" autocomplete="off" type="text" name="form[]" data-error="Enter ZIP code" placeholder="ZIP code" class="input input_cart">
+								</div>
+							</div>
+							<button type="submit" class="form-checkout__button btn btn_g">Continue</button>
+						</form>
+					</div>
+					<div class="checkout__cart cart-checkout">
+						<h4 class="cart-checkout__title small-title">Your cart</h4>
+						<div class="cart-checkout__items">
+							<div class="cart-checkout__item">
+								<div class="cart-checkout__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+								<div class="cart-checkout__price">$12.56</div>
+							</div>
+							<div class="cart-checkout__item">
+								<div class="cart-checkout__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+								<div class="cart-checkout__price">$12.56</div>
+							</div>
+							<div class="cart-checkout__item">
+								<div class="cart-checkout__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+								<div class="cart-checkout__price">$12.56</div>
+							</div>
+						</div>
+						<div class="cart-checkout__info info">
+							<div class=" info__number">Total amount</div>
+							<div class=" info__price">$12.56</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="footer__container">
+					<div class="footer__menu menu-footer">
+						<nav class="menu-footer__body">
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item"><a href="catalog.html" class="menu-footer__link">ALL PRODUCTS</a></li>
+								<li class="menu-footer__item"><a href="about.html" class="menu-footer__link">ABOUT SEEDRA</a></li>
+								<li class="menu-footer__item"><a href="blog.html" class="menu-footer__link">OUR BLOG</a></li>
+							</ul>
+							<a href="index.html" class="footer__logo">
+								<img src="img/logo_footer.svg" alt="logo">
+							</a>
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item"><a href="#" class="menu-footer__link">Terms&Conditions</a></li>
+								<li class="menu-footer__item"><a href="#" class="menu-footer__link">Privacy Policy</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<div class="bottom-footer__social">
+						<a href="#" class="bottom-footer__item _icon-inst"></a>
+						<a href="#" class="bottom-footer__item _icon-fb"></a>
+					</div>
+					<div class="bottom-footer__text">All rights reserved</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__container">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<img src="img/icons/closed.svg" alt="close">
+					</button>
+					<div class="popup__items">
+						<div class="popup__item">
+							<div class="popup__image">
+								<picture><source srcset="img/products/01.webp"type="image/webp"><img src="img/products/01.jpg" alt="product"></picture>
+							</div>
+							<div class="popup__info">
+								<div class="popup__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+								<div class="popup__numbers popup__numbers_one">
+									<div class="popup__body">
+										<div class="popup__packs">1 pack</div>
+										<div class="popup__price">$24.56</div>
+									</div>
+								</div>
+							</div>
+							<div data-da=".popup__numbers_one,575" class="popup__quantity quantity">
+								<button type="button" class="quantity__button quantity__button_minus"></button>
+								<div class="quantity__input">
+									<input autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button type="button" class="quantity__button quantity__button_plus"></button>
+							</div>
+						</div>
+						<div class="popup__item">
+							<div class="popup__image">
+								<picture><source srcset="img/products/01.webp"type="image/webp"><img src="img/products/01.jpg" alt="product"></picture>
+							</div>
+							<div class="popup__info">
+								<div class="popup__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+								<div class="popup__numbers popup__numbers_two">
+									<div class="popup__body">
+										<div class="popup__packs">1 pack</div>
+										<div class="popup__price">$24.56</div>
+									</div>
+								</div>
+							</div>
+							<div data-da=".popup__numbers_two,575" class="popup__quantity quantity">
+								<button type="button" class="quantity__button quantity__button_minus"></button>
+								<div class="quantity__input">
+									<input autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button type="button" class="quantity__button quantity__button_plus"></button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__buttons buttons">
+						<a href="" class="buttons__clear btn btn_w">Clear</a>
+						<a href="cart.html" class="buttons__proceed btn btn_g">Proceed to payment</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/app.min.js?_v=20220202113214"></script>
+</body>
+
+</html>
