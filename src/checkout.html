@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Checkout"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page__checkout">
+            <section class="checkout">
+               <div class="checkout__container">
+                  <div class="checkout__body">
+                     <div class="checkout__header header-block">
+                        <a href="cart.html" class="header-block__link _icon-arrow-left">
+                           <h2 class="header-block__title second-title">Checkout</h2>
+                        </a>
+                        <div class="header-block__lines">
+                           <a href="#" class="header-block__line header-block__line_inactive"></a>
+                           <a href="payment.html" class="header-block__line"></a>
+                        </div>
+                     </div>
+                     <form action="#" class="checkout__form form-checkout">
+                        <h3 class="form-checkout__title sub-title">Personal info</h3>
+                         <div class="form-checkout__row">
+                            <div class="form-checkout__line">
+                               <label for="name" class="form-checkout__label">Name</label>
+                               <input data-required id="name" autocomplete="off" type="text" name="form[]" data-error="Enter your name" placeholder="Your name" class="input input_cart">
+                            </div>
+                            <div class="form-checkout__line">
+                              <label for="phone" class="form-checkout__label">Phone number</label>
+                              <input data-required id="phone" autocomplete="off" type="text" name="form[]" data-error="Enter your number" placeholder="Your number" class="input input_cart">
+                           </div>
+                         </div>
+                         <h3 class="form-checkout__title form-checkout__title_address sub-title">Address</h3>
+                         <div class="form-checkout__row">
+                           <div class="form-checkout__line">
+                              <label for="state" class="form-checkout__label">State</label>
+                              <input data-required id="state" autocomplete="off" type="text" name="form[]" data-error="Enter name of state" placeholder="Name of state" class="input input_cart">
+                           </div>
+                           <div class="form-checkout__line">
+                             <label for="city" class="form-checkout__label">City</label>
+                             <input data-required id="city" autocomplete="off" type="text" name="form[]" data-error="Enter city name" placeholder="Name of city" class="input input_cart">
+                          </div>
+                        </div>
+                        <div class="form-checkout__row">
+                           <div class="form-checkout__line">
+                              <label for="address" class="form-checkout__label">Address</label>
+                              <input data-required id="address" autocomplete="off" type="text" name="form[]" data-error="Enter your address" placeholder="1901 Thornridge Cir. Shiloh, Hawaii 81063" class="input input_cart">
+                           </div>
+                           <div class="form-checkout__line">
+                             <label for="zip" class="form-checkout__label">ZIP code</label>
+                             <input data-required id="zip" autocomplete="off" type="text" name="form[]" data-error="Enter ZIP code" placeholder="ZIP code" class="input input_cart">
+                          </div>
+                        </div>
+                        <button type="submit" class="form-checkout__button btn btn_g">Continue</button>
+                     </form>
+                  </div>
+                  <div class="checkout__cart cart-checkout">
+                     <h4 class="cart-checkout__title small-title">Your cart</h4>
+                     <div class="cart-checkout__items">
+                        <div class="cart-checkout__item">
+                           <div class="cart-checkout__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+                           <div class="cart-checkout__price">$12.56</div>
+                        </div>
+                        <div class="cart-checkout__item">
+                           <div class="cart-checkout__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+                           <div class="cart-checkout__price">$12.56</div>
+                        </div>
+                        <div class="cart-checkout__item">
+                           <div class="cart-checkout__text">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</div>
+                           <div class="cart-checkout__price">$12.56</div>
+                        </div>
+                     </div>
+                     <div class="cart-checkout__info info">
+                        <div class=" info__number">Total amount</div>
+                        <div class=" info__price">$12.56</div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

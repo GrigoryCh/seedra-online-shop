@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Payment"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page__payment">
+            <section class="payment">
+               <div class="payment__container">
+                  <div class="payment__body">
+                     <div class="payment__header header-block">
+                        <a href="checkout.html" class="header-block__link _icon-arrow-left">
+                           <h2 class="header-block__title second-title">Payment info</h2>
+                        </a>
+                        <div class="header-block__lines">
+                           <a href="checkout.html" class="header-block__line"></a>
+                           <a href="#" class="header-block__line header-block__line_inactive"></a>
+                        </div>
+                     </div>
+                     <form action="#" class="payment__form form-payment">
+                        <div class="form-payment__line">
+                           <label for="card" class="form-payment__label">Card type</label>
+                           <ul class="form-payment__types">
+                              <li>
+                                 <button class="form-payment__type btn btn_b-pay">
+                                    <img src="@img/icons/apple.svg" alt="icon">
+                                 </button>
+                              </li>
+                              <li>
+                                 <button class="form-payment__type btn btn_b-pay">
+                                    <img src="@img/icons/visa.svg" alt="icon">
+                                 </button>
+                              </li>
+                              <li>
+                                 <button class="form-payment__type btn btn_b-pay _active">
+                                    <img src="@img/icons/master.svg" alt="icon">
+                                 </button>
+                              </li>
+                              <li>
+                                 <button class="form-payment__type btn btn_b-pay">
+                                    <img src="@img/icons/paypal.svg" alt="icon">
+                                 </button>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="form-payment__line">
+                           <label for="card" class="form-payment__label">Card number</label>
+                           <input data-required data-validate id="card" autocomplete="off" type="text" name="form[]" data-error="Enter card number" placeholder="0000 0000 0000 0000" class="input input_cart">
+                        </div>
+                        <div class="form-payment__row">
+                           <div class="form-payment__line form-payment__line_half">
+                              <label for="exp" class="form-payment__label">Expiring date</label>
+                              <input data-required data-validate id="exp" autocomplete="off" type="text" name="form[]" data-error="Enter expiring date" placeholder="17/17" class="input input_cart">
+                           </div>
+                           <div class="form-payment__line">
+                              <label for="ccv" class="form-payment__label form-payment__line_half">CCV</label>
+                              <input data-required data-validate id="ccv" autocomplete="off" type="text" name="form[]" data-error="Enter CCV" placeholder="123" class="input input_cart">
+                           </div>
+                        </div>
+                        <div class="form-payment__info info">
+                           <div class=" info__number">Total amount</div>
+                           <div class=" info__price">$12.56</div>
+                        </div>
+                        <button type="submit" class="form-payment__button btn btn_g ">$12.56<span>Continue</span> </button>
+                     </form>
+                  </div>
+               </div>
+            </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

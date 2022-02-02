@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Catalog"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page__catalogue catalogue">
+            <div class="catalogue__top top-catalogue">
+               <div class="top-catalogue__container">
+                  <div class="top-catalogue__body">
+                     <div class="top-catalogue__search">
+                        <div class="top-catalogue__form search-form">
+                           <form action="#" class="search-form__item">
+                              <button type="submit" class="search-form__btn _icon-search"></button>
+                              <input autocomplete="off" type="text" name="form[]" data-error="Try again" placeholder="Search" class="input">
+                           </form>
+                        </div>
+                     </div>
+                     <div class="top-catalogue__control customselect">
+                        <label for = "sel_1" class="customselect__text">Sort by</label>
+                        <select id = "sel_1" name="form[]" class="control">
+                           <option value="1" selected>Most expensive</option>
+                           <option value="2">Most expensive</option>
+                           <option value="3">Most expensive</option>
+                           <option value="4">Most expensive</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <section class="catalogue__bottom">
+               <div class="catalogue__container">
+                  <div class="catalogue__buttons catalog">
+                     <ul class="catalog__buttons">
+                        <li>
+                           <button class="catalog__button btn btn_b-big filter-btn is-checked" data-filter="*">
+                              <img src="@img/icons/01.svg" alt="icon">ALL
+                           </button>
+                        </li>
+                        <li>
+                           <button class="catalog__button btn btn_b-big filter-btn" data-filter=".bundles">
+                              <img src="@img/icons/02.svg" alt="icon">BUNDLES
+                           </button>
+                        </li>
+                        <li>
+                           <button class="catalog__button btn btn_b-big filter-btn" data-filter=".herbs">
+                              <img src="@img/icons/03.svg" alt="icon">HERBS
+                           </button>
+                        </li>
+                        <li>
+                           <button class="catalog__button btn btn_b-big filter-btn" data-filter=".veg">
+                              <img src="@img/icons/04.svg" alt="icon">VEGETABLES
+                           </button>
+                        </li>
+                        <li>
+                           <button class="catalog__button btn btn_b-big filter-btn" data-filter=".fruits">
+                              <img src="@img/icons/05.svg" alt="icon">FRUITS
+                           </button>
+                        </li>
+                        <li>
+                           <button class="catalog__button btn btn_b-big filter-btn" data-filter=".supplies">
+                              <img src="@img/icons/06.svg" alt="icon">SUPPLIES
+                           </button>
+                        </li>
+                        <li>
+                           <button class="catalog__button btn btn_b-big filter-btn" data-filter=".flowers">
+                              <img src="@img/icons/07.svg" alt="icon">FLOWERS
+                           </button>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="catalogue__body">
+                     <div data-spollers = "992,max" class="catalogue__filter filter-catalogue">
+                        <button data-spoller="" type="button" class="filter-catalogue__button">
+                           <h2 class="filter-catalogue__title">FILTERS</h2>
+                        </button>
+                        <div data-spollers class="filter-catalogue__items">
+                           <div class="filter-catalogue__item item-filter-catalogue">
+                              <button data-spoller type="button" class="item-filter-catalogue__title _spoller-active _icon-arrow">Seed type</button>
+                              <div class="item-filter-catalogue__body">
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_1" class="checkbox__label"><span class="checkbox__text">Hybrid</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_2" class="checkbox__label"><span class="checkbox__text">Open Pollinated</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_3" class="checkbox__label"><span class="checkbox__text">Organic Seeds, Plants, <br> and Supplies</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_4" class="checkbox__label"><span class="checkbox__text">Pelleted See</span></label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="filter-catalogue__item item-filter-catalogue">
+                              <button data-spoller type="button" class="item-filter-catalogue__title _icon-arrow">Featured</button>
+                              <div class="item-filter-catalogue__body">
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_5" class="checkbox__label"><span class="checkbox__text">Hybrid</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_6" class="checkbox__label"><span class="checkbox__text">Open Pollinated</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_7" class="checkbox__label"><span class="checkbox__text">Organic Seeds, Plants, <br> and Supplies</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_8" class="checkbox__label"><span class="checkbox__text">Pelleted See</span></label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="filter-catalogue__item item-filter-catalogue">
+                              <button data-spoller type="button" class="item-filter-catalogue__title _icon-arrow">Growing Conditions</button>
+                              <div class="item-filter-catalogue__body">
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_9" class="checkbox__label"><span class="checkbox__text">Hybrid</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_10" class="checkbox__label"><span class="checkbox__text">Open Pollinated</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_11" class="checkbox__label"><span class="checkbox__text">Organic Seeds, Plants, <br> and Supplies</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_12" class="checkbox__label"><span class="checkbox__text">Pelleted See</span></label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="filter-catalogue__price price-filter">
+										<button type="button" data-spoller class="price-filter__title item-filter-catalogue__title _spoller-active _icon-arrow">Price</button>
+										<div  class="price-filter__body">
+                                 <div class="price-filter__content">
+                                    <div class="price-filter__inputs">
+                                       <div class="price-filter__item">
+                                          <div class="price-filter__word">From</div>
+                                          <label for="input-0" class="price-filter__label">
+                                             <span class="price-filter__text">$</span>
+                                             <input id="input-0"   min="1232" max="999999" placeholder="1232" autocomplete="off" type="number"  name="form[]" class="price-filter__input">
+                                          </label>
+                                       </div>
+                                       <div class="price-filter__line"></div>
+                                       <div class="price-filter__item">
+                                          <div class="price-filter__word">To</div>
+                                          <label for="input-1" class="price-filter__label">
+                                             <span class="price-filter__text">$</span>
+                                             <input id="input-1"  min="1232" max="999999" placeholder="999999" autocomplete="off" type="number"  name="form[]" class="price-filter__input">
+                                          </label>
+                                       </div>
+                                    </div>
+                                    <div data-range-item class="price-filter__range" id="range-slider"></div>
+                                 </div>
+										</div>
+									</div>
+                           <div class="filter-catalogue__item item-filter-catalogue">
+                              <button data-spoller type="button" class="item-filter-catalogue__title _icon-arrow">Use</button>
+                              <div class="item-filter-catalogue__body">
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_13" class="checkbox__label"><span class="checkbox__text">Hybrid</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_14" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_14" class="checkbox__label"><span class="checkbox__text">Open Pollinated</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_15" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_15" class="checkbox__label"><span class="checkbox__text">Organic Seeds, Plants, <br> and Supplies</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_16" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_16" class="checkbox__label"><span class="checkbox__text">Pelleted See</span></label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="filter-catalogue__item item-filter-catalogue">
+                              <button data-spoller type="button" class="item-filter-catalogue__title _icon-arrow">Additional Characteristic</button>
+                              <div class="item-filter-catalogue__body">
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_17" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_17" class="checkbox__label"><span class="checkbox__text">Hybrid</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_18" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_18" class="checkbox__label"><span class="checkbox__text">Open Pollinated</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_19" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_19" class="checkbox__label"><span class="checkbox__text">Organic Seeds, Plants, <br> and Supplies</span></label>
+                                 </div>
+                                 <div class=" item-filter-catalogue__checkbox checkbox">
+                                    <input id="c_20" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_20" class="checkbox__label"><span class="checkbox__text">Pelleted See</span></label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="catalogue__content catalog">
+                        <div class="catalog__products">
+                           <article class="catalog__product product product_s herbs">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/01.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">Seedra Cilantro Seeds for Planting Indoor and Outdoor</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__price">$12.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s bundles veg">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/02.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__price">$12.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s bundles herbs">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/03.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">SEEDRA Spinach Seeds for Indoor and Outdoor Planting</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__price">$12.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s flowers herbs">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/01.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">Seedra Cilantro Seeds for Planting Indoor and Outdoor</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__price">$12.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s supplies fruits">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/02.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__icon">
+                                          <img src="@img/icons/flame.svg" alt="icon">
+                                       </div>
+                                       <div class="product__price">$12.56</div>
+                                       <div class="product__old-price">$15.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s supplies herbs">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/03.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">SEEDRA Spinach Seeds for Indoor and Outdoor Planting</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__price">$12.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s bundles herbs">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/03.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">SEEDRA Spinach Seeds for Indoor and Outdoor Planting</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__price">$12.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s flowers herbs">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/01.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">Seedra Cilantro Seeds for Planting Indoor and Outdoor</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__price">$12.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                           <article class="catalog__product product product_s supplies fruits">
+                              <a href="#" class="product__label"></a>
+                              <a href="card.html" class="product__image">
+                                 <img src="@img/products/02.jpg" alt="product">
+                              </a>
+                              <div class="product__body">
+                                 <div class="product__content">
+                                    <div class="product__rating rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">4.5</div>
+                                       <div class="rating__number">(123)</div>
+                                    </div>
+                                    <h4 class="product__title">
+                                       <a href="card.html" class="product__link-title">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</a>
+                                    </h4>
+                                 </div>
+                                 <div class="product__bottom">
+                                    <div class="product__prices">
+                                       <div class="product__icon">
+                                          <img src="@img/icons/flame.svg" alt="icon">
+                                       </div>
+                                       <div class="product__price">$12.56</div>
+                                       <div class="product__old-price">$15.56</div>
+                                    </div>
+                                    <a href="" class="product__cart _icon-cart"></a>
+                                 </div>
+                              </div>
+                           </article>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

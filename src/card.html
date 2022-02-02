@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Product"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page__carte carte">
+            <div class="carte__top top-carte">
+               <div class="top-carte__container">
+                  <nav class="top-carte__breadcrumbs breadcrumbs">
+                     <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link"><span> Main</span> /</a></li>
+                        <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link"><span>Catalog</span> /</a></li>
+                        <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link"><span>Vegetables</span> /</a></li>
+                        <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link"><span>Cucumber</span> /</a></li>
+                        <li class="breadcrumbs__item"><span class="breadcrumbs__current">SEEDRA cucumber</span></li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <section class="carte__main main-carte">
+               <div class="main-carte__container">
+                  <div class="main-carte__content">
+                     <div class="main-carte__images images-carte">
+                        <div class="images-carte__slider">
+                           <div class="images-carte__swiper">
+                              <div class="images-carte__slide-ibg">
+                                 <img src="@img/products/02.jpg" alt="product">
+                              </div>
+                              <div class="images-carte__slide-ibg">
+                                 <img src="@img/card/01.jpg" alt="product">
+                              </div>
+                              <div class="images-carte__slide-ibg">
+                                 <img src="@img/card/02.jpg" alt="product">
+                              </div>
+                              <div class="images-carte__slide-ibg">
+                                 <img src="@img/card/03.jpg" alt="product">
+                              </div>
+                              <div class="images-carte__slide-ibg">
+                                 <img src="@img/card/04.jpg" alt="product">
+                              </div>
+                              <div class="images-carte__slide-ibg">
+                                 <img src="@img/card/05.jpg" alt="product">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="images-carte__thumbs thumbs-images">
+                           <div class="thumbs-images__swiper">
+                              <div class="thumbs-images__slide-ibg">
+                                 <img src="@img/products/02.jpg" alt="product">
+                              </div>
+                              <div class="thumbs-images__slide-ibg">
+                                 <img src="@img/card/01.jpg" alt="product">
+                              </div>
+                              <div class="thumbs-images__slide-ibg">
+                                 <img src="@img/card/02.jpg" alt="product">
+                              </div>
+                              <div class="thumbs-images__slide-ibg">
+                                 <img src="@img/card/03.jpg" alt="product">
+                              </div>
+                              <div class="thumbs-images__slide-ibg">
+                                 <img src="@img/card/04.jpg" alt="product">
+                              </div>
+                              <div class="thumbs-images__slide-ibg">
+                                 <img src="@img/card/05.jpg" alt="product">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="main-carte__body body-carte">
+                        <h3 class="body-carte__title sub-title">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</h3>
+                        <div class="body-carte__labels">
+                           <div class="body-carte__label label label_b">
+                              <img src="@img/icons/checked.svg" alt="icon">
+                              <span>AVAILABLE</span> 
+                           </div>
+                           <div class="body-carte__label label label_w">
+                              <img src="@img/icons/04.svg" alt="icon">
+                              <span>VEGETABLES</span> 
+                           </div>
+                        </div>
+                        <div class="body-carte__number">
+                           <div class="body-carte__size">Size<span>2 PACK</span></div>
+                           <div class="body-carte__quantity quantity">
+                              <button type="button" class="quantity__button quantity__button_minus"></button>
+                              <div class="quantity__input">
+                                 <input autocomplete="off" type="text" name="form[]" value="2">
+                              </div>
+                              <button type="button" class="quantity__button quantity__button_plus"></button>
+                           </div>
+                        </div>
+                        <div class="body-carte__options options">
+                           <div class="options__item">
+                              <input hidden id="o_1" class="options__input" type="radio" value="1" name="option">
+                              <label for="o_1" class="options__label">
+                                 <span class="options__text">1 pack</span>  
+                                 <div class="options__price">start from <span>$1,56</span></div>
+                              </label>
+                           </div>
+                           <div class="options__item">
+                              <input hidden id="o_2" class="options__input" checked type="radio" value="2" name="option">
+                              <label for="o_2" class="options__label">
+                                 <span class="options__text">2 pack</span>  
+                                 <div class="options__price">start from <span>$1,56</span></div>
+                              </label>
+                           </div>
+                           <div class="options__item">
+                              <input hidden id="o_3" class="options__input" type="radio" value="3" name="option">
+                              <label for="o_3" class="options__label">
+                                 <span class="options__text">3 pack</span>  
+                                 <div class="options__price">start from <span>$1,56</span></div>
+                              </label>
+                           </div>
+                           <div class="options__item">
+                              <input hidden id="o_4" class="options__input" type="radio" value="4" name="option">
+                              <label for="o_4" class="options__label">
+                                 <span class="options__text">4 pack</span>  
+                                 <div class="options__price">start from <span>$1,56</span></div>
+                              </label>
+                           </div>
+                           <div class="options__item">
+                              <input hidden id="o_5" class="options__input" type="radio" value="5" name="option">
+                              <label for="o_5" class="options__label">
+                                 <span class="options__text">5 pack</span>  
+                                 <div class="options__price">start from <span>$1,56</span></div>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="body-carte__bottom bottom-body">
+                           <div class="bottom-body__prices">
+                              <div class="bottom-body__price-old">$15.56</div>
+                              <div class="bottom-body__price">$12.56</div>
+                           </div>
+                           <div class="bottom-body__buttons">
+                              <a href="" class="bottom-body__icon _icon-favourite"></a>
+                              <a href="" class="bottom-body__button btn btn_g">Add to cart</a>                          
+                           </div>
+                                             
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="carte__info info">
+               <div class="info__container">
+                  <h2 class="info__title second-title">Product information.</h2>
+               <div class="info__body">
+                  <div class="info__content">
+                        <ul class="info__list">
+                           <li class="info__item"><p class="info__text">
+                              EEDRA Cilantro Seeds - contains 300 seeds in 1 Pack and professional instructions created by PhD Helga George
+                           </p></li>
+                           <li class="info__item"><p class="info__text">
+                              Be sure of our quality - the freshest batches of this season. Non-GMO, Heirloom - our seeds were tested and have the best germination ratings. Your easy growing experience is our guarantee
+                           </p></li>
+                           <li class="info__item"><p class="info__text">
+                              Cilantro common culinary uses: salsa, guacamole, pesto, salads, chutney, baked breads, pad thai, pico de gallo, rice, grilled shrimp skewers, falafel, and more
+                           </p></li>
+                           <li class="info__item"><p class="info__text">
+                              Proudly sourced in the USA - our garden seeds are grown, harvested, and packaged in the USA. We support local farmers and are happy to produce this American-made product
+                           </p></li>
+                           <li class="info__item"><p class="info__text">
+                              SEEDRA customer service - please contact us directly through Amazon with any questions or concerns about our products. We care about each customer and do our best to provide you with 100% satisfaction
+                           </p></li>
+                        </ul>
+                  </div>
+                  <div class="info__table">
+                     <div class="info__lines">
+                        <div class="info__line line-info">
+                           <div class="line-info__text">Package Dimensions</div>
+                           <div class="line-info__datum">5.51 x 3.5 x 0.35 inches</div>
+                        </div>
+                        <div class="info__line line-info">
+                           <div class="line-info__text">Item Weight</div>
+                           <div class="line-info__datum">0.317 ounces</div>
+                        </div>
+                        <div class="info__line line-info">
+                           <div class="line-info__text">ASIN</div>
+                           <div class="line-info__datum">B08Z3HN5MP</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </section>
+            <section class="carte__ask ask">
+               <div class="ask__container">
+                  <h2 class="ask__title second-title">Frequently asked questions.</h2>
+               <div class="ask__body">
+                  <div class="ask__content">
+                     <div data-spollers data-one-spoller class="spollers">
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">
+                              <div class="spollers__icon"></div>
+                              <span>For seller: are these seeds organic? it does matter if they are organic, seeds can hold pesticides from the plant they grow from.</span>
+                           </button>
+                           <div class="spollers__body">I have heat mats and artificial light. 
+                              I planted them in all purpose potting soil. Moist not wet. Placed them on a heat mat. If not available, somewhere where it's 72 degrees. Add natural light, but I used artificial light. Takes 10- 15 days because of there hard shell on the seed. </div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title _spoller-active">
+                              <div class="spollers__icon"></div>
+                              <span>Can they be grown on hydroponic systems</span>
+                           </button>
+                           <div class="spollers__body">I have heat mats and artificial light. 
+                              I planted them in all purpose potting soil. Moist not wet. Placed them on a heat mat. If not available, somewhere where it's 72 degrees. Add natural light, but I used artificial light. Takes 10- 15 days because of there hard shell on the seed. </div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">
+                              <div class="spollers__icon"></div>
+                              <span>They did not germinate even when i followed directions. What should i do?</span>
+                           </button>
+                           <div class="spollers__body">I have heat mats and artificial light. 
+                              I planted them in all purpose potting soil. Moist not wet. Placed them on a heat mat. If not available, somewhere where it's 72 degrees. Add natural light, but I used artificial light. Takes 10- 15 days because of there hard shell on the seed. </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="ask__action action-ask">
+                     <div class="action-ask__body">
+                        <h3 class="action-ask__title sub-title">Didn’t find answer?</h3>
+                        <form action="#" class="action-ask__form">
+                           <label for="action-ask-input" class="action-ask__label">Ask your own!</label>
+                           <div class="action-ask__line">
+                              <textarea data-required id="action-ask-input" autocomplete="off" type="text" name="form[]" data-error="Enter your question" placeholder="Type here" class="action-ask__textarea"></textarea>
+                           </div>
+                           <button type="submit" class="action-ask__button btn btn_g">Send</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </section>
+            <section class="carte__customer customer">
+               <div class="customer__container">
+                  <div class="customer__top top-customer">
+                     <h2 class="top-customer__title second-title">Customer reviews.</h2>
+                     <a href="" class="top-customer__button btn btn_b">Make review</a>
+                  </div>
+                  <div class="customer__body">
+                     <div class="customer__column">
+                        <div class="customer__rating rating-cast">
+                           <div class="rating-cast__top">
+                              <div class="rating-cast__rate">4,1</div>
+                              <div class="rating-cast__content">
+                                 <div class="rating-cast__number">124 reviews</div>
+                                 <div class="rating-cast__stars rating rating_set">
+                                    <div class="rating__body">
+                                       <div class="rating__active"></div>
+                                       <div class="rating__items">
+                                          <input type="radio" class="rating__item" value="1" name="rating">
+                                          <input type="radio" class="rating__item" value="2" name="rating">
+                                          <input type="radio" class="rating__item" value="3" name="rating">
+                                          <input type="radio" class="rating__item" value="4" name="rating">
+                                          <input type="radio" class="rating__item" value="5" name="rating">
+                                       </div>
+                                    </div>
+                                    <div class="rating__value">4.6</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="rating-cast__body">
+                              <div class="rating-cast__items">
+                                 <div class="rating-cast__item">
+                                    <div class="rating-cast__star">5</div>
+                                    <div class="rating-cast__chart">
+                                       <div class="rating-cast__row rating-cast__row_1"></div>
+                                    </div>
+                                    <div class="rating-cast__value">81</div>
+                                 </div>
+                                 <div class="rating-cast__item">
+                                    <div class="rating-cast__star">4</div>
+                                    <div class="rating-cast__chart">
+                                       <div class="rating-cast__row rating-cast__row_2"></div>
+                                    </div>
+                                    <div class="rating-cast__value">45</div>
+                                 </div>
+                                 <div class="rating-cast__item">
+                                    <div class="rating-cast__star">3</div>
+                                    <div class="rating-cast__chart">
+                                       <div class="rating-cast__row rating-cast__row_3"></div>
+                                    </div>
+                                    <div class="rating-cast__value">32</div>
+                                 </div>
+                                 <div class="rating-cast__item">
+                                    <div class="rating-cast__star">2</div>
+                                    <div class="rating-cast__chart">
+                                       <div class="rating-cast__row rating-cast__row_4"></div>
+                                    </div>
+                                    <div class="rating-cast__value">1</div>
+                                 </div>
+                                 <div class="rating-cast__item">
+                                    <div class="rating-cast__star">1</div>
+                                    <div class="rating-cast__chart">
+                                       <div class="rating-cast__row rating-cast__row_5"></div>
+                                    </div>
+                                    <div class="rating-cast__value">1</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="customer__review review-cast">
+                           <div class="review-cast__top">
+                              <div class="review-cast__content">
+                                 <div class="review-cast__number">124 reviews</div>
+                                 <div class="review-cast__text">Photo&Video review</div>
+                              </div>
+                              <a href="" class="review-cast__link">View</a>
+                           </div>
+                           <div class="review-cast__images">
+                              <div class="review-cast__items">
+                                 <div class="review-cast__item images-block">
+                                    <a href="" class="images-block__image-ibg">
+                                       <img src="@img/customer/01.jpg" alt="seeds">
+                                    </a>
+                                    <a href="" class="images-block__image-ibg">
+                                       <img src="@img/customer/01.jpg" alt="seeds">
+                                    </a>
+                                 </div>
+                                 <div class="review-cast__item images-block">
+                                    <a href="" class="images-block__image-ibg">
+                                       <img src="@img/customer/01.jpg" alt="seeds">
+                                    </a>
+                                    <a href="" class="images-block__image-ibg">
+                                       <img src="@img/customer/01.jpg" alt="seeds">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="customer__column">
+                        <div class="customer__card card card_r">
+                           <div class="card__body">
+                              <div class="card__top card__top_h">
+                                 <div class="card__user user">
+                                    <a href="" class="user__photo">
+                                       <img src="@img/what/01.jpg" alt="user">
+                                    </a>
+                                    <a href="" class="user__name">Carla Samantoes-Diego</a>
+                                    <div class="user__info">Reviewed in the United States on June 18, 2021</div>
+                                 </div>
+                                 <div class="card__rating rating rating_set">
+                                    <div class="rating__body">
+                                       <div class="rating__active"></div>
+                                       <div class="rating__items">
+                                          <input type="radio" class="rating__item" value="1" name="rating">
+                                          <input type="radio" class="rating__item" value="2" name="rating">
+                                          <input type="radio" class="rating__item" value="3" name="rating">
+                                          <input type="radio" class="rating__item" value="4" name="rating">
+                                          <input type="radio" class="rating__item" value="5" name="rating">
+                                       </div>
+                                    </div>
+                                    <div class="rating__value">4.5</div>
+                                 </div>
+                              </div>
+                              <div class="card__text card__text_p">
+                                 SEEDRA Spinach Seeds - contains 600 seeds in 2 Packs and professional instructions created by PhD Helga George <br>
+                                 Be sure of our quality - the freshest batches of this season. Non-GMO, Heirloom - our seeds were tested and have the best germination ratings. 
+                              </div>
+                              <div class="card__bottom">
+                                 <div class="card__labels">
+                                    <div class="card__label">Size <span>2 PACK</span></div>
+                                    <div class="card__label label label_b">
+                                       <img src="@img/icons/checked.svg" alt="icon">
+                                       <span>VERIFIED</span> 
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="customer__card card card_r">
+                           <div class="card__body">
+                              <div class="card__top card__top_h">
+                                 <div class="card__user user">
+                                    <a href="" class="user__photo">
+                                       <img src="@img/what/01.jpg" alt="user">
+                                    </a>
+                                    <a href="" class="user__name">Carla Samantoes-Diego</a>
+                                    <div class="user__info">Reviewed in the United States on June 18, 2021</div>
+                                 </div>
+                                 <div class="card__rating rating rating_set">
+                                    <div class="rating__body">
+                                       <div class="rating__active"></div>
+                                       <div class="rating__items">
+                                          <input type="radio" class="rating__item" value="1" name="rating">
+                                          <input type="radio" class="rating__item" value="2" name="rating">
+                                          <input type="radio" class="rating__item" value="3" name="rating">
+                                          <input type="radio" class="rating__item" value="4" name="rating">
+                                          <input type="radio" class="rating__item" value="5" name="rating">
+                                       </div>
+                                    </div>
+                                    <div class="rating__value">4.5</div>
+                                 </div>
+                              </div>
+                              <div class="card__text">
+                                 Eine sehr aromatische Sorte, wollte die Himbeere gerade noch einmal bestellen, derzeit nicht verfügbar. So süße Früchte und das jetzt im Oktober, unglaublich
+                              </div>
+                              <div class="card__bottom">
+                                 <div class="card__item images-block">
+                                    <a href="" class="images-block__image-ibg images-block__image-ibg_s">
+                                       <img src="@img/customer/01.jpg" alt="seeds">
+                                    </a>
+                                    <a href="" class="images-block__image-ibg images-block__image-ibg_s">
+                                       <img src="@img/customer/01.jpg" alt="seeds">
+                                    </a>
+                                 </div>
+                                 <div class="card__labels">
+                                    <div class="card__label">Size <span>2 PACK</span></div>
+                                    <div class="card__label label label_b">
+                                       <img src="@img/icons/checked.svg" alt="icon">
+                                       <span>VERIFIED</span> 
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="carte__related related">
+               <div class="related__container">
+                  <h2 class="related__title second-title">Related products.</h2>
+               <div class="related__body catalog">
+                  <div class="catalog__products">
+                     <article class="catalog__product product">
+                        <a href="" class="product__label"></a>
+                        <a href="" class="product__image">
+                           <img src="@img/products/01.jpg" alt="product">
+                        </a>
+                        <div class="product__body">
+                           <div class="product__content">
+                              <div class="product__rating rating rating_set">
+                                 <div class="rating__body">
+                                    <div class="rating__active"></div>
+                                    <div class="rating__items">
+                                       <input type="radio" class="rating__item" value="1" name="rating">
+                                       <input type="radio" class="rating__item" value="2" name="rating">
+                                       <input type="radio" class="rating__item" value="3" name="rating">
+                                       <input type="radio" class="rating__item" value="4" name="rating">
+                                       <input type="radio" class="rating__item" value="5" name="rating">
+                                    </div>
+                                 </div>
+                                 <div class="rating__value">4.5</div>
+                                 <div class="rating__number">(123)</div>
+                              </div>
+                              <h4 class="product__title">
+                                 <a href="" class="product__link-title">Seedra Cilantro Seeds for Planting Indoor and Outdoor</a>
+                              </h4>
+                           </div>
+                           <div class="product__bottom">
+                              <div class="product__prices">
+                                 <div class="product__price">$12.56</div>
+                              </div>
+                              <a href="" class="product__cart _icon-cart"></a>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="catalog__product product">
+                        <a href="" class="product__label"></a>
+                        <a href="" class="product__image">
+                           <img src="@img/products/02.jpg" alt="product">
+                        </a>
+                        <div class="product__body">
+                           <div class="product__content">
+                              <div class="product__rating rating rating_set">
+                                 <div class="rating__body">
+                                    <div class="rating__active"></div>
+                                    <div class="rating__items">
+                                       <input type="radio" class="rating__item" value="1" name="rating">
+                                       <input type="radio" class="rating__item" value="2" name="rating">
+                                       <input type="radio" class="rating__item" value="3" name="rating">
+                                       <input type="radio" class="rating__item" value="4" name="rating">
+                                       <input type="radio" class="rating__item" value="5" name="rating">
+                                    </div>
+                                 </div>
+                                 <div class="rating__value">4.5</div>
+                                 <div class="rating__number">(123)</div>
+                              </div>
+                              <h4 class="product__title">
+                                 <a href="" class="product__link-title">SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</a>
+                              </h4>
+                           </div>
+                           <div class="product__bottom">
+                              <div class="product__prices">
+                                 <div class="product__price">$12.56</div>
+                              </div>
+                              <a href="" class="product__cart _icon-cart"></a>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="catalog__product product">
+                        <a href="" class="product__label"></a>
+                        <a href="" class="product__image">
+                           <img src="@img/products/03.jpg" alt="product">
+                        </a>
+                        <div class="product__body">
+                           <div class="product__content">
+                              <div class="product__rating rating rating_set">
+                                 <div class="rating__body">
+                                    <div class="rating__active"></div>
+                                    <div class="rating__items">
+                                       <input type="radio" class="rating__item" value="1" name="rating">
+                                       <input type="radio" class="rating__item" value="2" name="rating">
+                                       <input type="radio" class="rating__item" value="3" name="rating">
+                                       <input type="radio" class="rating__item" value="4" name="rating">
+                                       <input type="radio" class="rating__item" value="5" name="rating">
+                                    </div>
+                                 </div>
+                                 <div class="rating__value">4.5</div>
+                                 <div class="rating__number">(123)</div>
+                              </div>
+                              <h4 class="product__title">
+                                 <a href="" class="product__link-title">SEEDRA Spinach Seeds for Indoor and Outdoor Planting</a>
+                              </h4>
+                           </div>
+                           <div class="product__bottom">
+                              <div class="product__prices">
+                                 <div class="product__price">$12.56</div>
+                              </div>
+                              <a href="" class="product__cart _icon-cart"></a>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+               </div>
+            </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
